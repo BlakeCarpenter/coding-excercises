@@ -1,16 +1,4 @@
-/**
- * A unival tree is a tree where all the nodes have the same value. Given a binary tree, return the number of unival subtrees in the tree.
- * 
- * For example, the following tree should return 5:
- * 
- *    0
- *   / \
- *  1   0
- *     / \
- *    1   0
- *   / \
- *  1   1
- */
+import {test} from "../util/testUtil";
 
 class TreeNode{
     val: number;
@@ -86,15 +74,6 @@ function countUnivalSubtreesHelper(node: TreeNode): CountHelper{
     }
 
     return returnCH;
-}
-
-function test(expected: number, recieved: number): boolean{
-    if(expected == recieved){
-        console.log("Assertion passes");
-        return true;
-    }
-    console.log(`Assertion failed: Expected ${expected}, got ${recieved}`);
-    return false;
 }
 
 main();
