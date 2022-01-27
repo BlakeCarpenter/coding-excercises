@@ -1,0 +1,8 @@
+#/usr/bin/bash
+DATESTAMP=$(date +'Daily_%Y%m%d')
+README="${DATESTAMP}/README.md"
+TS_FILE="${DATESTAMP}/${DATESTAMP}.ts"
+
+mkdir $DATESTAMP
+touch $README
+touch $TS_FILE
