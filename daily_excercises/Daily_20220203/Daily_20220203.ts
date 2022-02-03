@@ -1,4 +1,4 @@
-import {test} from '../util/testUtil';
+import {test} from '../../util/testUtil';
 
 function main():void{
     let numsArr:number[] = [4,7,1,-3,2];

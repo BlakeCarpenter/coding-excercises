@@ -1,4 +1,4 @@
-import {test} from '../util/testUtil';
+import {test} from '../../util/testUtil';
 
 class ListNode{
     val:number

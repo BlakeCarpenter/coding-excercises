@@ -1,4 +1,4 @@
-import {test} from "../util/testUtil";
+import {test} from "../../util/testUtil";
 
 function main(){
     test(3, witnesses([3,6,3,4,1]));

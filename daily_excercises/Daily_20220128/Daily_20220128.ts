@@ -1,4 +1,4 @@
-import {test} from '../util/testUtil';
+import {test} from '../../util/testUtil';
 
 function main(){
     test(0, longestNonRepeatingSubstring(""));

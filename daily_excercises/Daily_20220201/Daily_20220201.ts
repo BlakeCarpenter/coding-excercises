@@ -1,4 +1,4 @@
-import {test} from "../util/testUtil";
+import {test} from "../../util/testUtil";
 import ListNode from "../structs/ListNode";
 
 function main(){

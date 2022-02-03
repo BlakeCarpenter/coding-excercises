@@ -1,4 +1,4 @@
-import {test} from '../util/testUtil';
+import {test} from '../../util/testUtil';
 
 function main(){
     let testArr:number[] = [1,2,3,4,5];
