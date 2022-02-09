@@ -1,9 +1,19 @@
 #/usr/bin/bash
-DATESTAMP=$(date +'Daily_%Y%m%d')
-README="${DATESTAMP}/README.md"
-TS_FILE="${DATESTAMP}/${DATESTAMP}.ts"
+if [ -z "$1" ]
+    then
+        FILENAME=$(date +'Daily_%Y%m%d')
+    else
+        FILENAME=$1
+fi
+README="${FILENAME}/README.md"
+TS_FILE="${FILENAME}/${FILENAME}.ts"
+if [ -z "$1" ]
+    then
+        README="daily_excercises/${README}"
+        TS_FILE="daily_excercises/${TS_FILE}"
+fi
 
-mkdir -p $DATESTAMP
+mkdir -p $FILENAME
 touch $README
 touch $TS_FILE
-cp DEFAULT_TSCONFIG.json $DATESTAMP/tsconfig.json
+cp DEFAULT_TSCONFIG.json $FILENAME/tsconfig.json
