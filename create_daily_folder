@@ -2,18 +2,15 @@
 if [ -z "$1" ]
     then
         FILENAME=$(date +'Daily_%Y%m%d')
+        FULLPATH="daily_excercises/${FILENAME}"
     else
         FILENAME=$1
+        FULLPATH="extra_excercises/${FILENAME}"
 fi
-README="${FILENAME}/README.md"
-TS_FILE="${FILENAME}/${FILENAME}.ts"
-if [ -z "$1" ]
-    then
-        README="daily_excercises/${README}"
-        TS_FILE="daily_excercises/${TS_FILE}"
-fi
+README="${FULLPATH}/README.md"
+TS_FILE="${FULLPATH}/${FILENAME}.ts"
 
-mkdir -p $FILENAME
+mkdir -p $FULLPATH
 touch $README
 touch $TS_FILE
-cp DEFAULT_TSCONFIG.json $FILENAME/tsconfig.json
+cp DEFAULT_TSCONFIG.json $FULLPATH/tsconfig.json
